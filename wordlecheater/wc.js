@@ -3,14 +3,14 @@ function cheat() {
     const wordlist = words.words;
 
     const guessLetters = [
-        document.getElementById('letter1').value !== '' ? document.getElementById('letter1').value : null,
-        document.getElementById('letter2').value !== '' ? document.getElementById('letter2').value : null,
-        document.getElementById('letter3').value !== '' ? document.getElementById('letter3').value : null,
-        document.getElementById('letter4').value !== '' ? document.getElementById('letter4').value : null,
-        document.getElementById('letter5').value !== '' ? document.getElementById('letter5').value : null
+        document.getElementById('letter1').value !== '' ? document.getElementById('letter1').value.toLowerCase() : null,
+        document.getElementById('letter2').value !== '' ? document.getElementById('letter2').value.toLowerCase() : null,
+        document.getElementById('letter3').value !== '' ? document.getElementById('letter3').value.toLowerCase() : null,
+        document.getElementById('letter4').value !== '' ? document.getElementById('letter4').value.toLowerCase() : null,
+        document.getElementById('letter5').value !== '' ? document.getElementById('letter5').value.toLowerCase() : null
     ];
-    const toExclude = document.getElementById('toExclude').value.split("");
-    const toInclude = document.getElementById('toInclude').value.split("");
+    const toExclude = document.getElementById('toExclude').value.toLowerCase().split("");
+    const toInclude = document.getElementById('toInclude').value.toLowerCase().split("");
     
     let numberGuesses = 0;
     guessLetters.forEach(letter => {
