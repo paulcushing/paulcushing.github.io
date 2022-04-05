@@ -59,3 +59,15 @@ function cheat() {
     document.getElementById('cheatResultText').innerHTML = numberWordsFound + " words found";
     document.getElementById('cheatResultList').innerHTML = "<ul>" + resultList + "</ul>";
 }
+
+function reset() {
+    document.getElementById('cheatResultText').innerHTML = "";
+    document.getElementById('cheatResultList').innerHTML = "";
+    document.getElementById('letter1').value = "";
+    document.getElementById('letter2').value = "";
+    document.getElementById('letter3').value = "";
+    document.getElementById('letter4').value = "";
+    document.getElementById('letter5').value = "";
+    document.getElementById('toExclude').value = "";
+    document.getElementById('toInclude').value = "";
+}
