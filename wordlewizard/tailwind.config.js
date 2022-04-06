@@ -1,13 +1,11 @@
 module.exports = {
-    content: [
-      './*.html'
-    ],
-    darkMode: 'media',
-    theme: {
-      extend: {},
-    },
-    variants: {
-      extend: {},
-    },
-    plugins: [],
-  }
+  content: ["./*.html", "./*.js"],
+  darkMode: "media",
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
