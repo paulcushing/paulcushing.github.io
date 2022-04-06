@@ -1,3 +1,130 @@
+const paginator = new function Paginate(){
+    const pageSize = 10;
+    const maxPages = 3;
+    let results = [];
+    let totalResults = 0;
+    let totalNumOfPages = 0;
+    let currentPage = 0;
+
+    this.setUpPaginate = function(values) {
+        results = values.sort();
+        totalResults = results.length;
+        totalNumOfPages = countTotalPages();
+        currentPage = 1;
+
+        changePage();
+     }
+
+    this.prevPage = function() {
+        if (currentPage > 1) {
+            currentPage--;
+            changePage();
+        }
+    }
+
+    this.nextPage = function() {
+        if (currentPage < totalNumOfPages) {
+            currentPage++;
+            changePage();
+        }
+    }
+
+    this.pageClick = function (page) {
+        if(currentPage === page) return;
+        
+        currentPage = page;
+        changePage();
+    }
+
+    const countTotalPages = function() {
+        let count = 0;
+        for (let i = 0; i < totalResults; i++)
+            if (i % pageSize === 0) count++;
+
+        return count;
+    }
+
+    const changePage = function() {
+        setPageBtns();
+        showPageResults();
+    }
+
+    const setPageBtns = function() {
+
+        if(totalNumOfPages === 0) {
+            document.getElementById('pageButtons').innerHTML = "";
+            return;
+        }
+
+        let defaultClass = "block w-full px-4 py-2 text-gray-500 bg-gray-300 rounded-md";
+        let activeClass = "block w-full px-4 py-2 text-black bg-gray-300 rounded-md";
+
+        const pagesToAdd = [];
+        let pageToShow;
+        // if currentPage button can be placed in the middle
+        if( (currentPage > (maxPages + 0)) && 
+            (currentPage < (totalNumOfPages - maxPages)) && 
+            (totalNumOfPages > (maxPages * 2))){
+            for(pageToShow = currentPage - 1; pageToShow <= currentPage + 1; pageToShow++)
+                pagesToAdd.push(pageToShow);
+        }else if(currentPage <= maxPages){
+            const startingPage = (maxPages < totalNumOfPages) ? maxPages : totalNumOfPages; 
+            for(pageToShow = startingPage; pageToShow >= 1; pageToShow--)
+                pagesToAdd.unshift(pageToShow);
+        }else{ // if max pages away from total number of pages (if at the end)
+            for(pageToShow = (totalNumOfPages - maxPages + 1); pageToShow<=totalNumOfPages; pageToShow++)
+                pagesToAdd.push(pageToShow);
+        }
+         
+        const buttons = [{
+            onClick: "paginator.prevPage();",
+            class: currentPage === 1 ? defaultClass : activeClass,
+            disable:`${currentPage === 1 ? "disabled":""}`,
+            value: "Prev"
+        }];
+
+        pagesToAdd.forEach(page => {
+            buttons.push({
+                onClick: `paginator.pageClick(${page});`,
+                class: (page === currentPage) ? activeClass : defaultClass,
+                disable: "",
+                value: `${page}`
+            }); 
+        });
+
+        buttons.push({
+            onClick: "paginator.nextPage();",
+            class: currentPage === totalNumOfPages ? defaultClass : activeClass,
+            disable: `${currentPage === totalNumOfPages ? "disabled":""}`,
+            value: "Next"
+        });
+
+        const pageButtons = buttons.map(button => (
+            `<div>
+                <button onclick=${button.onClick} 
+                    class="${button.class}"
+                    ${button.disable}>
+                    ${button.value}
+                </button>
+            </div>`
+        )).join('');
+        
+        document.getElementById('pageButtons').innerHTML = pageButtons;
+    }
+
+    const showPageResults = function () {
+        const startIndex = (currentPage - 1) * pageSize;
+        const words = results.slice(startIndex, startIndex + pageSize);
+        
+        let resultList = "";
+        words.forEach(word=> {
+            resultList +=`<li>${word}</li>`
+        });
+
+        document.getElementById('cheatResultList').innerHTML = "<ul>" + resultList + "</ul>";
+    }
+}();
+
 function cheat() {
     /* Include wordlist */
     const wordlist = words.words;
@@ -52,12 +179,9 @@ function cheat() {
         }
     });
 
-    let resultList = "";
-    wordsFound.forEach(word => {
-        resultList += `<li>${word}</li>`;
-    });
     document.getElementById('cheatResultText').innerHTML = numberWordsFound + " words found";
-    document.getElementById('cheatResultList').innerHTML = "<ul>" + resultList + "</ul>";
+    
+    paginator.setUpPaginate(wordsFound);
 }
 
 function reset() {
@@ -70,4 +194,5 @@ function reset() {
     document.getElementById('letter5').value = "";
     document.getElementById('toExclude').value = "";
     document.getElementById('toInclude').value = "";
+    paginator.setUpPaginate([]);
 }

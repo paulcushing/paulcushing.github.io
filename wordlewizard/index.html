@@ -31,19 +31,19 @@
                                 </label>
                                 <div class="grid grid-cols-5 gap-4">
                                     <div>
-                                        <input aria-label="Letter 1 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter1" type="text" name="letter1">
+                                        <input maxlength="1" aria-label="Letter 1 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter1" type="text" name="letter1">
                                     </div>
                                     <div>
-                                        <input aria-label="Letter 2 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter2" type="text" name="letter2">
+                                        <input maxlength="1" aria-label="Letter 2 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter2" type="text" name="letter2">
                                     </div>
                                     <div>
-                                        <input aria-label="Letter 3 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter3" type="text" name="letter3">
+                                        <input maxlength="1" aria-label="Letter 3 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter3" type="text" name="letter3">
                                     </div>
                                     <div>
-                                        <input aria-label="Letter 4 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter4" type="text" name="letter4">
+                                        <input maxlength="1" aria-label="Letter 4 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter4" type="text" name="letter4">
                                     </div>
                                     <div>
-                                        <input aria-label="Letter 5 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter5" type="text" name="letter5">
+                                        <input maxlength="1" aria-label="Letter 5 guess" class="text-center appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="letter5" type="text" name="letter5">
                                     </div>
                                   </div>
                                 
@@ -63,11 +63,15 @@
                            <button tabindex="" onclick="cheat();" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:shadow-outline my-4">
                                 Cheat
                             </button>
-                            <div id="cheatResult" class="w-full text-center text-gray-700 text-sm font-bold mb-2">
+
+                            <div id="pageContainer" class="w-full text-center text-gray-700 text-sm font-bold mb-2"> 
                                 <p>
                                     <span id="cheatResultText"></span>
                                     <span id="cheatResultList"></span>
                                 </p>
+                            </div>
+                            <div class="w-full">
+                                <div id="pageButtons" class="flex flex-row justify-center"></div>
                             </div>
                         </div>
                     </div>
