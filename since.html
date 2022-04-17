@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Since</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #days {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 32px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="days"></div>
+  </body>
+
+  <script type="text/javascript">
+    // JavaScript program to illustrate
+    // calculation of no. of days between two date
+
+    // To set two dates to two variables
+    var date1 = new Date("07/05/2021");
+    var date2 = new Date();
+
+    // To calculate the time difference of two dates
+    var Difference_In_Time = date2.getTime() - date1.getTime();
+
+    // To calculate the no. of days between two dates
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    const days = Math.round(Difference_In_Days);
+    //To display the final no. of days (result)
+    const out =
+      "Days = " +
+      days +
+      "<br />" +
+      "Weeks = " +
+      (days / 7).toFixed(1) +
+      "<br />" +
+      "Months = " +
+      (days / 30).toFixed(2);
+
+    document.getElementById("days").innerHTML = out;
+  </script>
+</html>
