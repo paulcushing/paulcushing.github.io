@@ -2,26 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Since</title>
-    <style>
-      body {
-        text-align: center;
-      }
-      #days {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 32px;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
+    <link rel="icon" type="image/png" href="images/wizard.png" />
   </head>
-  <body>
-    <div id="days"></div>
+  <body
+    class="w-100 grid place-items-center h-screen font-sans text-center bg-gradient-to-b from-cyan-300 to-blue-500"
+  >
+    <div class="text-4xl">
+      <p id="years" class="font-black text-8xl italic">###.##</p>
+      <p class="text-gray-800">Years</p>
+      <br />
+      <p id="months" class="font-black text-8xl italic">###.##</p>
+      <p class="text-gray-600">Months</p>
+      <br />
+      <p id="weeks" class="font-black text-8xl italic">###.##</p>
+      <p class="text-gray-500">Weeks</p>
+      <br />
+      <p id="days" class="font-black text-8xl italic">###</p>
+      <p class="text-gray-300">Days</p>
+      <br />
+      <p id="hours" class="font-black text-8xl italic">###</p>
+      <p class="text-gray-100">Hours</p>
+    </div>
   </body>
 
   <script type="text/javascript">
@@ -29,7 +33,7 @@
     // calculation of no. of days between two date
 
     // To set two dates to two variables
-    var date1 = new Date("07/05/2021");
+    var date1 = new Date("07/05/2021 9:00:00");
     var date2 = new Date();
 
     // To calculate the time difference of two dates
@@ -38,18 +42,16 @@
     // To calculate the no. of days between two dates
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
-    const days = Math.round(Difference_In_Days);
-    //To display the final no. of days (result)
-    const out =
-      "Days = " +
-      days +
-      "<br />" +
-      "Weeks = " +
-      (days / 7).toFixed(1) +
-      "<br />" +
-      "Months = " +
-      (days / 30).toFixed(2);
+    const hours = (Difference_In_Time / 36e5).toFixed(0);
+    const days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+    const weeks = (days / 7).toFixed(1);
+    const months = (days / 30).toFixed(2);
+    const years = (days / 365).toFixed(2);
 
-    document.getElementById("days").innerHTML = out;
+    document.getElementById("years").innerHTML = years;
+    document.getElementById("months").innerHTML = months;
+    document.getElementById("weeks").innerHTML = weeks;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
   </script>
 </html>
