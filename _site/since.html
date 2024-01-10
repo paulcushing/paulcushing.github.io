@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Since</title>
+    <link rel="icon" type="image/png" href="images/wizard.png" />
+  </head>
+  <body
+    class="w-100 min-h-screen font-sans text-center bg-gradient-to-b from-cyan-300 to-blue-500"
+  >
+    <div class="font-black text-7xl py-2 w-full">
+      <div
+        class="relative h-28 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
+      >
+        <p id="years" class="text-8xl italic z-10">###.##</p>
+        <p
+          class="text-gray-200/50 absolute origin-center left-1/2 bottom-0 translate-y-1/4"
+        >
+          Years
+        </p>
+      </div>
+      <div
+        class="relative h-28 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
+      >
+        <p id="months" class="text-8xl italic z-10">###.##</p>
+        <p
+          class="text-gray-200/50 absolute origin-center left-1/2 bottom-0 translate-y-1/4"
+        >
+          Months
+        </p>
+      </div>
+      <div
+        class="relative h-28 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
+      >
+        <p id="weeks" class="text-8xl italic z-10">###.##</p>
+        <p
+          class="text-gray-200/50 absolute origin-center left-1/2 bottom-0 translate-y-1/4"
+        >
+          Weeks
+        </p>
+      </div>
+      <div
+        class="relative h-28 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
+      >
+        <p id="days" class="text-8xl italic z-10">###</p>
+        <p
+          class="text-gray-200/50 absolute origin-center left-1/2 bottom-0 translate-y-1/4"
+        >
+          Days
+        </p>
+      </div>
+      <div
+        class="relative h-28 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
+      >
+        <p id="hours" class="text-8xl italic z-10">###</p>
+        <p
+          class="text-gray-200/50 absolute origin-center left-1/2 bottom-0 translate-y-1/4"
+        >
+          Hours
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    // JavaScript program to illustrate
+    // calculation of no. of days between two date
+
+    // To set two dates to two variables
+    var date1 = new Date("07/05/2021 9:00:00");
+    var date2 = new Date();
+
+    // To calculate the time difference of two dates
+    var Difference_In_Time = date2.getTime() - date1.getTime();
+
+    // To calculate the no. of days between two dates
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    const hours = (Difference_In_Time / 36e5).toFixed(0);
+    const days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
+    const weeks = (days / 7).toFixed(1);
+    const months = (days / 30).toFixed(2);
+    const years = (days / 365).toFixed(2);
+
+    document.getElementById("years").innerHTML = years;
+    document.getElementById("months").innerHTML = months;
+    document.getElementById("weeks").innerHTML = weeks;
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+  </script>
+</html>
