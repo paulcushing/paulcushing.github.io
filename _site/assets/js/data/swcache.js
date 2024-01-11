@@ -1,45 +1,45 @@
 const resource = [
   /* --- CSS --- */
-  '/assets/css/jekyll-theme-chirpy.css',
+  '/_site/assets/css/jekyll-theme-chirpy.css',
 
   /* --- PWA --- */
-  '/app.js',
-  '/sw.js',
+  '/_site/app.js',
+  '/_site/sw.js',
 
   /* --- HTML --- */
-  '/index.html',
-  '/404.html',
+  '/_site/index.html',
+  '/_site/404.html',
 
   
-    '/categories/',
+    '/_site/categories/',
   
-    '/tags/',
+    '/_site/tags/',
   
-    '/archives/',
+    '/_site/archives/',
   
-    '/about/',
+    '/_site/about/',
   
 
   /* --- Favicons & compressed JS --- */
   
   
-    '/assets/img/favicons/android-chrome-192x192.png',
-    '/assets/img/favicons/android-chrome-512x512.png',
-    '/assets/img/favicons/apple-touch-icon.png',
-    '/assets/img/favicons/browserconfig.xml',
-    '/assets/img/favicons/favicon-16x16.png',
-    '/assets/img/favicons/favicon-32x32.png',
-    '/assets/img/favicons/favicon.ico',
-    '/assets/img/favicons/mstile-150x150.png',
-    '/assets/img/favicons/safari-pinned-tab.svg',
-    '/assets/img/favicons/site.webmanifest',
-    '/assets/js/dist/categories.min.js',
-    '/assets/js/dist/commons.min.js',
-    '/assets/js/dist/home.min.js',
-    '/assets/js/dist/misc.min.js',
-    '/assets/js/dist/page.min.js',
-    '/assets/js/dist/post.min.js',
-    '/assets/img/favicons/.DS_Store'
+    '/_site/assets/img/favicons/android-chrome-192x192.png',
+    '/_site/assets/img/favicons/android-chrome-512x512.png',
+    '/_site/assets/img/favicons/apple-touch-icon.png',
+    '/_site/assets/img/favicons/browserconfig.xml',
+    '/_site/assets/img/favicons/favicon-16x16.png',
+    '/_site/assets/img/favicons/favicon-32x32.png',
+    '/_site/assets/img/favicons/favicon.ico',
+    '/_site/assets/img/favicons/mstile-150x150.png',
+    '/_site/assets/img/favicons/safari-pinned-tab.svg',
+    '/_site/assets/img/favicons/site.webmanifest',
+    '/_site/assets/js/dist/categories.min.js',
+    '/_site/assets/js/dist/commons.min.js',
+    '/_site/assets/js/dist/home.min.js',
+    '/_site/assets/js/dist/misc.min.js',
+    '/_site/assets/js/dist/page.min.js',
+    '/_site/assets/js/dist/post.min.js',
+    '/_site/assets/img/favicons/.DS_Store'
 ];
 
 /* The request url with below domain will be cached */
