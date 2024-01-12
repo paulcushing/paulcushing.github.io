@@ -65,18 +65,54 @@
   </body>
 
   <script type="text/javascript">
-    // JavaScript program to illustrate
-    // calculation of no. of days between two date
+    // Date defaults
+    let m = 7;
+    let d = 5;
+    let y = 2021;
+    let h = 9;
 
+    // Get date params from url
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("name")) {
+      const name = urlParams.get("name");
+      if (name === 'dday') {
+        m = 4;
+        d = 16;
+        y = 1944;
+        h = 9;
+      } else if (name === 'birthday') {
+        m = 7;
+        d = 5;
+        y = 1995;
+        h = 9;
+      } else if (name === 'anniversary') {
+        m = 7;
+        d = 5;
+        y = 2019;
+        h = 9;
+      } else if (name === 'graduation') {
+        m = 7;
+        d = 5;
+        y = 2017;
+        h = 9;
+      }
+    } else {
+      m = urlParams.get("m") || m;
+      d = urlParams.get("d") || d;
+      y = urlParams.get("y") || y;
+      h = urlParams.get("h") || h;
+    }
+
+    const dateString = `${m}/${d}/${y} ${h}:00:00`;
     // To set two dates to two variables
-    var date1 = new Date("07/05/2021 9:00:00");
+    var date1 = new Date(dateString);
     var date2 = new Date();
 
     // To calculate the time difference of two dates
     var Difference_In_Time = date2.getTime() - date1.getTime();
 
     // To calculate the no. of days between two dates
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
     const hours = (Difference_In_Time / 36e5).toFixed(0);
     const days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
