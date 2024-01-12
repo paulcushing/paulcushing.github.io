@@ -5,8 +5,8 @@ date: 2022-04-16 11:33:00 -0700
 categories: [Projects]
 tags: [javascript]
 image:
-  path: /images/posts/20201104/hourglass.jpg
-  lqip: /images/posts/20201104/hourglass_small.jpg
+  path: /images/posts/20220416/hourglass.jpg
+  lqip: /images/posts/20220416/hourglass_small.jpg
   alt: Showing how long it's been since a given date
 draft: true
 ---
