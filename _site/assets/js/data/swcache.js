@@ -46,7 +46,7 @@ const resource = [
 const allowedDomains = [
   
 
-  'paulcushing.github.io',
+  'localhost:4000',
 
   
 

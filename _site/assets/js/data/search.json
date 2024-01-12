@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "How Long Since...",
+    "url": "/posts/how-long-since/",
+    "categories": "Projects",
+    "tags": "javascript",
+    "date": "2022-04-16 12:33:00 -0600",
+    
+
+
+
+
+
+    
+    "snippet": "Now and then, I think back about an important time in my life. And I wonder, how long has it been since then? When that happens, I typically do a Google search for the time since some date and get ...",
+    "content": "Now and then, I think back about an important time in my life. And I wonder, how long has it been since then? When that happens, I typically do a Google search for the time since some date and get a number of days or weeks.It happened enough times finally that I decided to build my own. Initially, I hard-coded a date I found useful. I hit that page from time to time to be reminded of how long it’s been.Over time though, I thought of other dates that might be useful to have a page for. Instead of having a different page for each date, I used JavaScript to catch some URL parameters and render the time frames based on that. It makes the page far more flexible.const urlParams = new URLSearchParams(window.location.search);const m = urlParams.get(\"m\") || 6; // monthconst d = urlParams.get(\"d\") || 6; // dayconst y = urlParams.get(\"y\") || 1944; // yearconst h = urlParams.get(\"h\") || 9; // hourI used Tailwind CSS for the styles and came up with something I think looks nice.The result is at Since.Now, if you want keep it simple so you don’t have to add the variables each time you want to see the elapsed time, you can create a redirect on your server, or even use a shortlink service."
+  },
+  
+  {
     "title": "Third-Party Scripts in React",
     "url": "/posts/third-party-scripts-in-react/",
     "categories": "React",

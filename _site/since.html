@@ -65,18 +65,23 @@
   </body>
 
   <script type="text/javascript">
-    // JavaScript program to illustrate
-    // calculation of no. of days between two date
+    // Get date params from url
+    const urlParams = new URLSearchParams(window.location.search);
+    const m = urlParams.get("m") || 7;
+    const d = urlParams.get("d") || 5;
+    const y = urlParams.get("y") || 2021;
+    const h = urlParams.get("h") || 9;
 
+    const dateString = `${m}/${d}/${y} ${h}:00:00`;
     // To set two dates to two variables
-    var date1 = new Date("07/05/2021 9:00:00");
+    var date1 = new Date(dateString);
     var date2 = new Date();
 
     // To calculate the time difference of two dates
     var Difference_In_Time = date2.getTime() - date1.getTime();
 
     // To calculate the no. of days between two dates
-    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
     const hours = (Difference_In_Time / 36e5).toFixed(0);
     const days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
