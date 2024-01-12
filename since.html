@@ -65,12 +65,43 @@
   </body>
 
   <script type="text/javascript">
+    // Date defaults
+    let m = 7;
+    let d = 5;
+    let y = 2021;
+    let h = 9;
+
     // Get date params from url
     const urlParams = new URLSearchParams(window.location.search);
-    const m = urlParams.get("m") || 7;
-    const d = urlParams.get("d") || 5;
-    const y = urlParams.get("y") || 2021;
-    const h = urlParams.get("h") || 9;
+    if (urlParams.has("name")) {
+      const name = urlParams.get("name");
+      if (name === 'dday') {
+        m = 4;
+        d = 16;
+        y = 1944;
+        h = 9;
+      } else if (name === 'birthday') {
+        m = 7;
+        d = 5;
+        y = 1995;
+        h = 9;
+      } else if (name === 'anniversary') {
+        m = 7;
+        d = 5;
+        y = 2019;
+        h = 9;
+      } else if (name === 'graduation') {
+        m = 7;
+        d = 5;
+        y = 2017;
+        h = 9;
+      }
+    } else {
+      m = urlParams.get("m") || m;
+      d = urlParams.get("d") || d;
+      y = urlParams.get("y") || y;
+      h = urlParams.get("h") || h;
+    }
 
     const dateString = `${m}/${d}/${y} ${h}:00:00`;
     // To set two dates to two variables

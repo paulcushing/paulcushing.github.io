@@ -104,3 +104,6 @@ dist
 .tern-port
 
 .DS_Store
+
+# Don't waste time passing the built files around
+_site/

@@ -3,8 +3,8 @@ title: Third-Party Scripts in React
 author: pcushing
 date: 2020-11-04 11:33:00 -0700
 categories: [React]
-tags: [hooks, integration]
-pin: true
+tags: [react hooks, integration]
+pin: false
 math: true
 mermaid: true
 image:
@@ -20,8 +20,8 @@ import { useEffect } from 'react';
 
 function ScriptInjector() {
 
-    /* Let's imagine we need to append our key to the url for 
-    example, there's often some identification that needs to 
+    /* Let's imagine we need to append our key to the url for
+    example, there's often some identification that needs to
     be supplied */
     const ourApiKey = '123456789`;
     const thirdParyUrl = 'https://theirscript.js';
@@ -38,10 +38,10 @@ function ScriptInjector() {
             thirdPartyScript.id = 'third-party-script';
             document.body.appendChild(thirdPartyScript);
 
-            /* In some instances, we need to initiate their script 
-            from our side once the external script has loaded, in 
-            that case, I create my own js file that calls their 
-            function, and load it on the page, after the external 
+            /* In some instances, we need to initiate their script
+            from our side once the external script has loaded, in
+            that case, I create my own js file that calls their
+            function, and load it on the page, after the external
             script has loaded */
             thirdPartyScript.onload = () => {
                 const initFunction = document.createElement('script');
@@ -63,13 +63,11 @@ Since I removed parts specific to my business use to make this more generic, I h
 When you go to use this component on the page or within another component, you'll import this one, then place it in the render method as you would with any other component.
 
 ```javascript
-import ScriptInjector from 'components/ScriptInjector';
+import ScriptInjector from "components/ScriptInjector";
 
 // Then inside render method
 
-<ScriptInjector />
-
+<ScriptInjector />;
 ```
 
 Another thing that could be done is to pass the script URL in as a prop, however, many outside services format their URLs and API key requirements differently, so ensuring the format works for multiple services may get complicated.
-
