@@ -117,6 +117,26 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
+# Jekyll Compose settings
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      author: pcushing
+      category: []
+      tags: []
+      image:
+        path:
+        lqip:
+        alt:
+    posts:
+      author: pcushing
+      categories: []
+      tags: []
+      image:
+        path:
+        lqip:
+        alt:
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:

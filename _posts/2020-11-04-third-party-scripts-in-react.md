@@ -8,8 +8,8 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: /images/posts/20201104/castle.jpg
-  lqip: /images/posts/20201104/castle_small.jpg
+  path: /images/posts/2020-11-04/castle.jpg
+  lqip: /images/posts/2020-11-04/castle_small.jpg
   alt: Injecting 3rd party scripts into your React components.
 ---
 
