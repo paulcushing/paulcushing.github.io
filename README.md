@@ -16,3 +16,5 @@ or to view and work on drafts
 - Create a draft `bundle exec jekyll draft "A New Post Title"`
 - Publish it `bundle exec jekyll publish _drafts/my-new-draft.md`
 - Unpublish `bundle exec jekyll unpublish _posts/my-new-draft.md`
+
+See [Jekyll Compose](https://github.com/jekyll/jekyll-compose) for additional options
