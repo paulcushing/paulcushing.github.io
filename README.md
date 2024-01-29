@@ -1,5 +1,7 @@
 # paulcushing.github.io
 
+AKA [paulcushing.dev](https://paulcushing.dev)
+
 A Jekyll site for sharing some things, as well as some random tests for this and that.
 
 ## Local Dev Server

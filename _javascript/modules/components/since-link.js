@@ -14,7 +14,7 @@ export function sinceLink() {
       function setLink() {
         console.log('Running since-link');
         
-        const url = 'https://paulcushing.github.io/since.html?m=' + month.value + '&y=' + year.value + '&d=' + day.value + '&h=' + hour.value;
+        const url = 'https://paulcushing.dev/since.html?m=' + month.value + '&y=' + year.value + '&d=' + day.value + '&h=' + hour.value;
 
         sinceLink.innerHTML = '<a href="' + url + '">' + url + '</a>';
       }
