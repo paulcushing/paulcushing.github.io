@@ -2,7 +2,7 @@
 title: How Long Since...
 author: pcushing
 date: 2022-04-16 11:33:00 -0700
-categories: [Projects]
+categories: [Development]
 tags: [javascript]
 image:
   path: /images/posts/2022-04-16/hourglass.jpg
