@@ -2,8 +2,8 @@
 title: Third-Party Scripts in React
 author: pcushing
 date: 2020-11-04 11:33:00 -0700
-categories: [React]
-tags: [react hooks, integration]
+categories: [Development]
+tags: [react, integration]
 pin: false
 math: true
 mermaid: true
