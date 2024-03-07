@@ -12,7 +12,7 @@ tags:
 date: 2024-03-07 10:54 -0700
 image:
   path: /images/posts/2024-03-07/city.jpg
-  lqip: /images/posts/2024-03-07/city_sm.jpg
+  lqip: /images/posts/2024-03-07/city_small.jpg
   alt: A city of internet parts
 ---
 
