@@ -74,7 +74,7 @@ Then visit `http://localhost:4000` in your browser.
 
 ## Step 4: Push to GitHub
 
-The Chirpy theme comes with some great GitHub workflows. I didn't have a use for most of those though, so I simplified things by removing them and consolidating the parts I wanted in my own workflow I called `shipit`. Check it out at [paulcushing.github.io/.github/workflows/shipit.yml](shipit.yml) if that's helpful to you.
+The Chirpy theme comes with some great GitHub workflows. I didn't have a use for most of those though, so I simplified things by removing them and consolidating the parts I wanted in my own workflow I called `shipit`. Check it out at [shipit.yml](https://github.com/paulcushing/paulcushing.github.io/blob/main/.github/workflows/shipit.yml) if that's helpful to you.
 
 I pushed my changes to GitHub. Then I went to the settings for my repo and scrolled down to the GitHub Pages section. I selected the `main` branch and the `root` directory. Then I clicked `Save`.
 
