@@ -249,16 +249,13 @@ if (document.getElementById("distribution-wrapper")) {
       }
     })
 
-    // output.appendChild(document.createTextNode(letter + ": " + wordsWithLetter));
-    // output.appendChild(document.createElement("br"));
-
     outputArray.push({ letter: letter, count: wordsWithLetter });
   }
 
   outputArray.sort((a, b) => b.count - a.count);
 
   outputArray.forEach((item) => {
-    const letter = item.letter;
+    const letter = item.letter.toUpperCase();
     const count = item.count;
 
     const letterElement = document.createElement("div");
