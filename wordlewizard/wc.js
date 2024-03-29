@@ -216,6 +216,8 @@ function cheat() {
     "The wizard found " + numberWordsFound + " words!";
 
   paginator.setUpPaginate(wordsFound);
+
+  document.getElementById("cheatResultText").scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
 
 function reset() {
@@ -229,4 +231,38 @@ function reset() {
   document.getElementById("toExclude").value = "";
   document.getElementById("toInclude").value = "";
   paginator.setUpPaginate([]);
+}
+
+if (document.getElementById("distribution-wrapper")) {
+  const wordlist = words.words;
+  const output = document.getElementById("distribution-output");
+
+  let outputArray = [];
+
+  for (i = 97; i <= 122; i++) {
+    const letter = String.fromCharCode(i);
+    let wordsWithLetter = 0;
+
+    wordlist.forEach((word) => {
+      if (word.split("").includes(letter)) {
+        wordsWithLetter++;
+      }
+    })
+
+    // output.appendChild(document.createTextNode(letter + ": " + wordsWithLetter));
+    // output.appendChild(document.createElement("br"));
+
+    outputArray.push({ letter: letter, count: wordsWithLetter });
+  }
+
+  outputArray.sort((a, b) => b.count - a.count);
+
+  outputArray.forEach((item) => {
+    const letter = item.letter;
+    const count = item.count;
+
+    const letterElement = document.createElement("div");
+    letterElement.innerHTML = letter + ": " + count;
+    output.appendChild(letterElement);
+  });
 }
