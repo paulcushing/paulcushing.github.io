@@ -83,5 +83,9 @@ layout: compress
     {% endif %}
 
     {% include_cached search-loader.html %}
+
+    {% if page.contact %}
+      {% include contact-modal.html %}
+    {% endif %}
   </body>
 </html>

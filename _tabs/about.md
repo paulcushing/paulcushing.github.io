@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+contact: true
 ---
 
 ![Paul Cushing](/assets/img/paul.jpeg){: width="200" height="200" .w-20 .right}
@@ -15,3 +16,5 @@ For more about me on the personal side, I have a poorly maintained blog at [theP
 I often take notes on the things I learn. New shortcuts. The syntax for this or that. However, I also have not found one place to log all of the notes. Many of them have been in physical notebooks that are now long gone... along with the information. Many have been in Apple Notes, Evernote, Notion, or one of the many other wonderful note taking apps I've used.
 
 This will hopefully be the solution. One note repository to rule them all perhaps. _We shall see_.
+
+<contact-form apiUrl="https://api.paulcushing.dev/api/v1/mail/send/contact" token="1R7gQsGdCaH9Xi6X44wk37P3SvrpzldKtPbUqbFW25521687" buttonStyle="button" buttonText="Contact" dialogTitle="Drop Me A Line"></contact-form>
