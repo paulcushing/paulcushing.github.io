@@ -12,6 +12,12 @@
   >
     <div class="font-black text-7xl py-2 w-full">
       <div
+        class="relative h-14 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
+      >
+        <p id="total" class="text-sm italic z-10">###</p>
+        <p class="text-lg z-10"> = </p>
+      </div>
+      <div
         class="relative h-28 bg-gradient-to-b from-transparent to-gray-900/10 grid place-items-center overflow-hidden"
       >
         <p id="years" class="text-8xl italic z-10">###.##</p>
@@ -61,6 +67,7 @@
           Hours
         </p>
       </div>
+      
     </div>
   </body>
 
@@ -115,15 +122,26 @@
     // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 
     const hours = (Difference_In_Time / 36e5).toFixed(0);
-    const days = Math.round(Difference_In_Time / (1000 * 3600 * 24));
-    const weeks = (days / 7).toFixed(1);
-    const months = (days / 30).toFixed(2);
+    const days = Math.floor(hours / 24);
+    const weeks = Math.floor(days / 7);
+    const numMonthsInFirstYear = 12 - (date1.getMonth() + 1);
+    const numMonthsInFullYears = 12 * (date2.getFullYear() - date1.getFullYear() - 1);
+    const numMonthsInThisYear = date2.getMonth() + 1;
+    const months = numMonthsInFirstYear + numMonthsInFullYears + numMonthsInThisYear;
     const years = (days / 365).toFixed(2);
+
+    const totalMonths = Math.floor(months % 12) > 0 ? Math.floor(months % 12).toString().concat(Math.floor(months % 12) > 1 ? ' months,' : ' month,') : '';
+    const totalWeeks = Math.floor((days - (weeks * 7)) / 7) > 0 ? Math.floor((days - (weeks * 7)) / 7).toString().concat((days - (weeks * 7)) > 1 ? ' weeks,' : ' week,') : '';
+    const totalDays = days % 7 > 0 ? (days % 7).toString().concat((days % 7) > 1 ? ' days,' : ' day,') : '';
+    const totalHours = (hours - (days * 24)).toString().concat((hours - (days * 24)) > 1 ? ' hours' : ' hour');
+    const totalYears = Math.floor(years) > 0 ? Math.floor(years).toString().concat(Math.floor(years) > 1 ? ' years,' : ' year,') : '';
+    const total = `${totalYears} ${totalMonths} ${totalWeeks} ${totalDays} ${totalHours}`;
 
     document.getElementById("years").innerHTML = years;
     document.getElementById("months").innerHTML = months;
     document.getElementById("weeks").innerHTML = weeks;
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = hours;
+    document.getElementById("total").innerHTML = total;
   </script>
 </html>
