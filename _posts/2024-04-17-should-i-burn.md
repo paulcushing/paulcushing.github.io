@@ -9,7 +9,7 @@ tags:
 - api
 - nextjs
 - integration
-date: 2024-04-17 12:17 -0700
+date: 2024-04-17 08:17 -0700
 image:
   path: "/images/posts/2024-04-17/shouldiburn.jpg"
   lqip: "/images/posts/2024-04-17/shouldiburn_small.jpg"
