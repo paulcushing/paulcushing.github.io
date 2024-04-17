@@ -7,8 +7,8 @@ category:
 tags:
   - javascript
 image:
-  path: "/images/posts/2021-11-16/santa.jpg"
-  lqip: "/images/posts/2021-11-16/santa_small.jpg"
+  path: /images/posts/2021-11-16/santa.jpg
+  lqip: /images/posts/2021-11-16/santa_small.jpg
   alt: Secret Santa preparing for delivery
 date: 2021-11-16 11:41 -0700
 ---
