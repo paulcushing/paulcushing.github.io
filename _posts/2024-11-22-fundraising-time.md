@@ -41,7 +41,7 @@ Other options include setting the primary and secondary colors of the design and
 
 For instance, some friends here in town are taking donations of turkeys for families in need. Imagine they're looking to collect 500 turkeys. I could add a fundraising bar to their site like this.
 
-<fundraising-bar currentAmount="323" goal="500" primaryColor="#8d6609" secondaryColor="#50C878" units="Turkeys">
+<fundraising-bar currentAmount="323" goal="500" primaryColor="#8d6609" secondaryColor="#50C878" units="Turkeys"></fundraising-bar>
 
 You can find more information on the GitHub page. Feel free to use it on your own site. It's hosted directly on GitHub too. If you have any questions or suggestions for improvements, let me know. I'd love to hear from you.
 
