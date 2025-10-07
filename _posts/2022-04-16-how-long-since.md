@@ -24,7 +24,7 @@ const y = urlParams.get("y") || 1944; // year
 const h = urlParams.get("h") || 9; // hour
 ```
 
-The result is at <a href="https://paulcushing.dev/since.html?m=12&d=25&y=2000&h=9" target="_blank">Since</a>.
+The result is at <a href="https://www.paulcushing.dev/since.html?m=12&d=25&y=2000&h=9" target="_blank">Since</a>.
 
 Now, if you want keep it simple so you don't have to add the variables each time you want to see the elapsed time, you can create a redirect on your server, or even use a shortlink service.
 
@@ -33,7 +33,7 @@ Now, if you want keep it simple so you don't have to add the variables each time
 
 So now you can use a link like:
 
-`https://paulcushing.dev/since.html&name=dday`
+`https://www.paulcushing.dev/since.html&name=dday`
 
 I included a couple of potential examples in the code as well. Find that on GitHub at [Since on GitHub](https://github.com/paulcushing/paulcushing.github.io/blob/main/since.html).
 

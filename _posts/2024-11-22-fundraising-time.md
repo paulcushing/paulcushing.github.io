@@ -15,7 +15,7 @@ image:
 date: 2024-11-22 17:10 -0700
 ---
 
-<script src="https://paulcushing.dev/web-components/fundraisingBar.js"></script>
+<script src="https://www.paulcushing.dev/web-components/fundraisingBar.js"></script>
 
 We're rounding Thanksgiving time and heading into the Christmas season. It's a time when many non-profits are looking to raise funds for their causes. One of the most common ways to do this is through a fundraising thermometer. You've probably seen them before. They're a graphic representation of a goal amount and the amount raised so far. The thermometer fills up as the donations come in.
 
@@ -28,7 +28,7 @@ It's responsive, so it will fill the width of its container. You can set the cur
 To include it on your site, you can add the following script tag to the header of your page.
 
 ```html
-<script src="https://paulcushing.dev/web-components/fundraisingBar.js"></script>
+<script src="https://www.paulcushing.dev/web-components/fundraisingBar.js"></script>
 ```
 
 Then you can add the custom element to your page like this.
