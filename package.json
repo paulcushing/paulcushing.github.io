@@ -8,7 +8,7 @@
   },
   "author": "Paul Cushing",
   "license": "MIT",
-  "homepage": "https://www.paulcushing.dev",
+  "homepage": "https://paulcushing.dev",
   "scripts": {
     "prebuild": "npx rimraf assets/js/dist",
     "build": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs",

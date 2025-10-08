@@ -82,7 +82,7 @@ I pushed my changes to GitHub. Then I went to the settings for my repo and scrol
 
 It took a few minutes for GitHub to build my site. Once it was done, I was able to visit my site at `https://paulcushing.github.io`.
 
-For me, I also wanted my site to be available at `https://www.paulcushing.dev`. I used the repo Settings. Clicking on the Pages menu option reveals a field for a Custom Domain. I filled it in, then I went to my domain registrar and added a CNAME record to point to `paulcushing.github.io`. It took a few minutes for the DNS to update, but then I was able to visit my site at `https://www.paulcushing.dev`.
+For me, I also wanted my site to be available at `https://paulcushing.dev`. I used the repo Settings. Clicking on the Pages menu option reveals a field for a Custom Domain. I filled it in, then I went to my domain registrar and added a CNAME record to point to `paulcushing.github.io`. It took a few minutes for the DNS to update, but then I was able to visit my site at `https://paulcushing.dev`.
 
 ---
 
